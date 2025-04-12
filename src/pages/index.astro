@@ -1,0 +1,44 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+
+import GitHub from '../components/icons/Github.astro';
+import Badge from '../components/Badge.astro';
+
+
+
+---
+<Layout title="welcome to my page">
+	<main>
+		<section class="px-2 sm:px-4 md:px-6 max-w-5xl mx-auto">
+			<h1 class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold pb-4 flex items-center flex-col sm:flex-row gap-y-4 sm:gap-x-6">
+				Hola, Soy Iván Sierra 
+				<a 
+					  href="https://www.linkedin.com/in/ivan-dario-sierra-vega-33300123a/"
+					  target="_blank"
+					  rel="noopener noreferrer"
+					  class="text-blue-300 hover:text-blue-500 transition-colors duration-200"
+					  aria-label="LinkedIn profile"
+				  >
+				  <Badge>Disponible para trabajar</Badge>
+				  </a>  
+			  </h1>
+			  <h2 class="text-lg sm:text-xl lg:text-2xl text-wrap opacity-60 text-center sm:text-left">
+				Soy un apasionado por la tecnología y el desarrollo de software.
+				  <span class="text-yellow-200/90 opacity-80"> Tecnólogo en desarrollo de sistemas informáticos.  </span>
+				<span class="text-red-100/90">De Bucaramanga, Colombia.</span>
+				Me especializo en el desarrollo de aplicaciones web.👌
+			  </h2>
+		  
+			<ul class="mt-6 ">
+			  <li>
+				<a href="https://github.com/kirivanCode" class="flex items-center gap-2 text-white hover:text-gray-300 transition-colors">
+				  <GitHub class="w-6 h-6 bg-center mx-auto" />
+				
+				</a>
+			  </li>
+			</ul>
+		  </section>
+		  
+	</main>
+</Layout>
