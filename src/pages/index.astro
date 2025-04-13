@@ -2,16 +2,31 @@
 
 import Layout from '../layouts/Layout.astro';
 
-import GitHub from '../components/icons/Github.astro';
+import SocialPill from '../components/SocialPill.astro';
+import GitHub from '../components/icons/GitHub.astro';
 import Badge from '../components/Badge.astro';
-
-
+import LinkedIn from '../components/icons/LinkedIn.astro';
+import Mail from '../components/icons/mail.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Briedcase from '../components/icons/Briefcase.astro';
+import Code from '../components/icons/Code.astro';
+import Projects from '../components/Proyects.astro';
 
 ---
-<Layout title="welcome to my page">
+<Layout title="Portafolio de kirivan- Tecnólogo en desarrollo de sistemas informáticos" description="Portafolio de kirivan- Tecnólogo en desarrollo de sistemas informáticos">
 	<main>
-		<section class="px-2 sm:px-4 md:px-6 max-w-5xl mx-auto">
-			<h1 class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold pb-4 flex items-center flex-col sm:flex-row gap-y-4 sm:gap-x-6">
+		<SectionContainer  class="pt-16 py-44 pb-24 pl-4 pr-4 sm:pl-0 sm:pr-0">
+			
+
+		<img src="https://avatars.githubusercontent.com/u/123826376?v=4" 
+			alt="kirivan photo"
+			class="rounded-full w-16 h-16 sm:w-20 sm:h-20" />
+			
+
+
+			<h1 class="pt-7 text-white text-3xl md:text-4xl lg:text-5xl font-bold flex 
+			flex-row gap-x-4 pb-6 lg:pb-10">
 				Hola, Soy Iván Sierra 
 				<a 
 					  href="https://www.linkedin.com/in/ivan-dario-sierra-vega-33300123a/"
@@ -23,22 +38,65 @@ import Badge from '../components/Badge.astro';
 				  <Badge>Disponible para trabajar</Badge>
 				  </a>  
 			  </h1>
-			  <h2 class="text-lg sm:text-xl lg:text-2xl text-wrap opacity-60 text-center sm:text-left">
+			  <h2 class="text-xl  text-wrap max-[700px]:">
 				Soy un apasionado por la tecnología y el desarrollo de software.
 				  <span class="text-yellow-200/90 opacity-80"> Tecnólogo en desarrollo de sistemas informáticos.  </span>
-				<span class="text-red-100/90">De Bucaramanga, Colombia.</span>
+				<span class="text-blue-500">De Bucaramanga, Colombia.</span>
 				Me especializo en el desarrollo de aplicaciones web.👌
 			  </h2>
-		  
-			<ul class="mt-6 ">
-			  <li>
-				<a href="https://github.com/kirivanCode" class="flex items-center gap-2 text-white hover:text-gray-300 transition-colors">
-				  <GitHub class="w-6 h-6 bg-center mx-auto" />
-				
-				</a>
-			  </li>
-			</ul>
-		  </section>
+
+			  
+
+			<nav class=" flex gab-4 mt-8 flex-wrap gap-x-4">
+					<SocialPill href="https://github.com/kirivanCode" target="_blank" rel="noopener noreferrer">
+						<GitHub class="size-6" />
+						<span>GitHub</span>
+					</SocialPill>
+
+					<SocialPill href="https://www.linkedin.com/in/ivan-dario-sierra-vega-33300123a/" target="_blank" rel="noopener noreferrer">
+						<LinkedIn class="size-6" />
+						<span>LinkedIn</span>
+					</SocialPill>
+
+					<SocialPill  target="_blank" rel="noopener noreferrer">
+						<Mail class="size-6" 
+								/>
+						ivansierravega18@gmail.com
+					</SocialPill>
+				</nav>
+					
+			
+			</SectionContainer>
+
+			
+
+
+		<SectionContainer id="experiencia" class="pt-24 ">
+			
+			<h2 class="text-2xl font-semibold mb-6 flex gab-x-3 items-center">
+				<Briedcase></Briedcase>
+				Progreso...
+			</h2>
+			
+		
+		<Experience	/>
+
+	</SectionContainer>
+
+	<SectionContainer id="proyectos" class="pt-24 ">
+			<h1 class="text-2xl font-semibold mb-6 flex gab-x-3 items-center">Proyectos</h1>
+		<h2 class="text-2xl font-semibold mb-6 flex gab-x-3 items-center">
+			<Code><Code/>
+			
+		</h2>
+
+		<p class="text-gray-400 mb-4">
+			Estoy en proceso de actualizar mi portafolio con nuevos proyectos.
+			<span class="text-blue-500">¡Estoy trabajando en más!</span>
+		</p>
+		<Projects />
+
+</SectionContainer>
 		  
 	</main>
 </Layout>

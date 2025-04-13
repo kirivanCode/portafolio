@@ -1,0 +1,40 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Desarrollador Full stack e Ingeniero en proceso...",  
+    company: "Freelance",
+    description:
+      "Desarrollador de aplicaciones web. Especializado en React, Next.js, Node.js y Astro. Desarrollo de aplicaciones web con tecnologías como React, Next.js, Node.js",
+    link: "https://twitch.tv/midudev",
+  },
+  {
+    date: "2021 - 2024",
+    title: "Tecnólogo en desarrollo de sistemas informáticos",
+    company: "Unidades Tecnologicas de Santander",
+    description:
+      "Tecnólogo en desarrollo de sistemas informáticos. Aprendí a desarrollar aplicaciones web y móviles. Aprendí a trabajar en equipo y a resolver problemas.",
+    link: "https://www.uts.edu.co/",
+  },
+
+  {
+    date: "2019 - 2022",
+    title: "English B1",
+    company: "Actualmente aumentando mis conocimientos",
+    description:
+      "Completed an intermediate-level English course (B1) over a three-year period. Gained solid skills in reading, writing, listening, and speaking. Developed the ability to engage in everyday conversations, understand texts on familiar topics, and write clear and connected sentences. ",
+   
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
