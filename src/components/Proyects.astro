@@ -4,6 +4,9 @@ import Laravel from "./icons/Laravel.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import React from "./icons/react.astro"
+import Unity from "./icons/unity.astro"
+import Flutter from "./icons/flutter.astro"
 
 const TAGS = {
   LARAVEL: {
@@ -16,24 +19,66 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  React: {
+    name: "React",
+    class: "bg-[#61DAFB] text-black",
+    icon: React,
+  },
+  Unity: {
+    name: "Unity",
+    class: "bg-[#000000] text-white",
+    icon: Unity,
+  },
+  Flutter: {
+    name: "Flutter",
+    class: "bg-[#02569B] text-white",
+    icon: Flutter,
+  },
 }
 const PROJECTS = [
   {
-    title: "Backend API - Laravel",
+    title: "Backend API",
     description:
       "API RESTful desarrollada con Laravel. Permite gestionar usuarios, roles y permisos. Incluye autenticación y validación de datos.",
-    link: "https://svgl.vercel.app/",
+    
     github: "https://github.com/GeniuX-arch/Proyecto-grado-backend-laravel.git",
-    image: "/projects/laravel.jpg",
-    tags: [TAGS.LARAVEL, TAGS.TAILWIND],
+    image: "https://geniux-arch.github.io/portafolio-2.0/img/proyecto1.png",
+    tags: [TAGS.LARAVEL],
   },
   {
-    title: "Desarrollo de varios proyectos en astro con tailwind",
+    title: "Gestión de Horarios de la UTS ",
     description:
-      "Desarrollo de varios proyectos en astro, incluyendo un portafolio personal y una aplicación de recetas.",
-    link: "https://github.com/kirivanCode?tab=repositories",
-    image: "/projects/megumin.gif",
-    tags: [TAGS.TAILWIND],
+      "Proyecto colaborativo con GeniuX-arch que necesita las UTS para ahorrar tiempo y recursos en la creación de horarios teniendo en cuenta los contratos de los profesores",
+    github: "https://github.com/GeniuX-arch/proyecto-grado-frontend",
+    image: "/projects/horario1.jpg",
+    tags: [TAGS.TAILWIND , TAGS.React],
+  },
+
+  {
+    title: "Gestion de inventario de una empresa pequeña",
+    description:
+      "Desarrollo de un sistema de gestión de inventario para una empresa pequeña utilizando Laravel y Filament.",
+    github: "https://github.com/kirivanCode/filament_inventario2",
+    link: "https://filament-inventario2.vercel.app",
+    image: "/projects/filament.png",
+    tags: [TAGS.LARAVEL],
+  },
+
+  {
+    title: "Videjuego de plataforma 2D",
+    description:
+      "Desarrollado en unity con el proposito de aprender a programar en C# y crear un videojuego de plataforma 2D. Ademas cuento con conocimientos en la creacion de videojuegos en 3D.",
+   link: "https://drive.google.com/file/d/17pXdZOm8obpJzfE64Kw6f307GMLWw93k/view?usp=sharing",
+    image: "/projects/game2.png",
+    tags: [TAGS.Unity],
+  },
+{
+  title: "Aplicación de pausas activas",
+    description:
+      "Aplicación móvil desarrollada en Flutter utilizando la metodología Scrum, con el propósito de aprender Dart y fortalecer habilidades en desarrollo multiplataforma.",
+   github: "https://github.com/kirivanCode/final_daimox_AppPausasActivas",
+    image: "/projects/flutter.png",
+    tags: [TAGS.Flutter],
   },
 ]
 ---
@@ -82,7 +127,7 @@ const PROJECTS = [
             {link && (
               <LinkButton href={link}>
                 <Link class="size-4" />
-                Preview
+                Ver
               </LinkButton>
             )}
           </footer>
